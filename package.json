@@ -33,6 +33,7 @@
     "cosmos-kit": "2.8.6",
     "next": "^13",
     "osmo-query": "16.5.1",
+    "osmojs": "^16.9.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.6.0",

@@ -1,5 +1,5 @@
-import { Link, Box, Button, Icon, Text, useTheme, useColorModeValue } from '@interchain-ui/react';
 import { dependencies } from '@/config';
+import { Box, Button, Icon, Text, useColorModeValue, useTheme } from '@interchain-ui/react';
 
 const stacks = ['CosmosKit', 'Next.js'];
 
@@ -36,35 +36,7 @@ export function Header() {
             marginBottom: '$8',
           }}
         >
-          Create Cosmos App
-        </Text>
-        <Text as="h2" fontWeight="$bold">
-          <Text
-            as="span"
-            fontSize={{ mobile: '$3xl', tablet: '$8xl', desktop: '$8xl' }}
-          >
-            Welcome to&nbsp;
-          </Text>
-          <Text
-            as="span"
-            fontSize={{ mobile: '$3xl', tablet: '$8xl', desktop: '$8xl' }}
-            color={useColorModeValue('$primary500', '$primary200')}
-          >
-            {stacks.join(' + ')}
-            {' + '}
-
-            <Link
-              href={osmojs.name}
-              target="_blank"
-              rel="noreferrer"
-              attributes={{
-                color: useColorModeValue('$primary500', '$primary200'),
-                fontSize: { mobile: '$4xl', tablet: '$8xl', desktop: '$8xl' },
-              }}
-            >
-              {osmojs.name}
-            </Link>
-          </Text>
+          Cosmos dApp
         </Text>
       </Box>
     </>
