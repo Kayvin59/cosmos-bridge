@@ -1,5 +1,5 @@
+import { IconName, Button as UIButton } from '@interchain-ui/react';
 import { MouseEventHandler } from 'react';
-import { Button as UIButton, IconName } from '@interchain-ui/react';
 
 export type ButtonProps =  {
   text?: string;
@@ -38,23 +38,25 @@ export function Button({
   );
 };
 
-Button.Connect = ({ text = 'Connect Wallet', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
+Button.Connect = function Connect({ text = 'Connect Wallet', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
+Button.Connected = function Connected({ text = 'My Wallet', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
 
-Button.Connected = ({ text = 'My Wallet', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
-
-Button.Disconnected = ({ text = 'Connect Wallet', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
-
-Button.Connecting = ({ text = 'Connecting ...', loading = true }: ConnectProps) =>
-  <Button text={text} loading={loading} />
-
-Button.Rejected = ({ text = 'Reconnect', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
-
-Button.Error = ({ text = 'Change Wallet', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
-
-Button.NotExist = ({ text = 'Install Wallet', onClick = noop }: ConnectProps) =>
-  <Button text={text} icon="walletFilled" onClick={onClick} />
+Button.Disconnected = function Disconnected({ text = 'Connect Wallet', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
+Button.Connecting = function Connecting({ text = 'Connecting ...', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
+Button.Rejected = function Rejected({ text = 'Reconnect', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
+Button.Error = function Error({ text = 'Install Wallet', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
+Button.NotExist = function NotExist({ text = 'Change Wallet', onClick = noop }: ConnectProps) {
+  return <Button text={text} icon="walletFilled" onClick={onClick} />;
+};
